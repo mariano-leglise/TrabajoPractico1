@@ -1,0 +1,9 @@
+{
+    "carreras": [
+        { "id": "1", "nombre": "Desarrollador Full Stack" },
+        { "id": "2", "nombre": "DevOps" },
+        { "id": "3", "nombre": "SysAdmin" },
+        { "id": "4", "nombre": "Analista de Sistemas" },
+        { "id": "5", "nombre": "Diseñador UX/UI" }
+    ]
+}

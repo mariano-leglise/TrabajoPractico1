@@ -1,0 +1,174 @@
+
+:root {
+    --primary-color: #1e90ff;
+    --secondary-color: #8cc744;
+    --bg-color: #92c7523b;
+    --text-color: #333;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#bienvenida {
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./assets/ITS-Cipolletti-RN-768x576.jpg);
+    background-size: cover;
+    color: var(--secondary-color);
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bienvenida-content h2 {
+    font-size: 2rem;
+}
+
+.bienvenida-content p {
+    font-size: 1.5rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 2rem; 
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 1.2rem; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0073e6;
+}
+
+#nosotros, #carreras, #contacto {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.carrera-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.carrera {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.menu-hamburguesa {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    nav {
+        position: relative; 
+    }
+
+    
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        z-index: 1000; 
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    
+    nav ul.show {
+        display: block;
+        opacity: 1; 
+    }
+
+    #navLinks li a {
+        padding: 1rem;
+        display: block;
+        color: var(--secondary-color);
+        font-size: 1.5rem; 
+    }
+}
+
+@media (min-width: 769px) {
+   
+    nav ul {
+        display: flex;
+        position: static;
+        background-color: transparent;
+    }
+}
